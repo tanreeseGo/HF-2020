@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+nav {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    padding: 15px 60px;
+    z-index: 99;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+nav .title{
+    color: rgb(255, 255, 255);
+    font-family: 'Arimo', sans-serif;
+    text-decoration: none;
+}
+.main-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+nav .main-nav .link a {
+    margin-right: 25px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 12px 20px;
+    border-radius: 7px;
+    color: rgb(255, 255, 255);
+    font-family: Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+.sec-1 {
+   width: 100%;
+}
+.sec-1 img {
+ 
+    position: relative;
+    width: 100%;
+}
+.sec-1 .description {
+    position: absolute;
+    top: 500px;
+    right: 0;
+    z-index: 1;
+}
+
+
+
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+}
+
+.sec-1 {
+    width: 100%;
+}
+.sec-1 img {
+    position: relative;
+    width: 100%;
+}
+.sec-1 .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    padding: 230px 80px 90px 80px;
+    z-index: 1;
+
+    
+
+}
+footer{
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+/* pseudo classes */
+
+nav .main-nav .link a:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+/* responsive */
+
+@media screen and (max-width:760px){
+    
+    .main-nav{
+        position: absolute;
+        right: 0;
+        height: 95vh;
+        top: 58px;
+        background-color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 80px;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in ;
+
+    }
+    .main-nav .link {
+        opacity: 0;
+    }
+    nav .main-nav .link a {
+        font-size: 30px;
+        margin-right: 0;
+    }
+    .burger {
+        display: block;
+    }
+}
+@media screen and (max-width: 460px){
+    .main-nav{
+        padding: 0;
+    }
+}
+
+
+/* classList */
+/* for burger */
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* keyframes */
+/* for burger */
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
